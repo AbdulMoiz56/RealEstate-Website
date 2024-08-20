@@ -37,27 +37,28 @@
     font-size: 1.5rem;
 }
 
-@media screen and (max-width:940px) {
+
+@media screen and (max-width: 940px) {
     .hamburger {
         display: block;
     }
 
     .navbar .nav-menu {
-        position: absolute;
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
+        position: absolute;
         top: 90px;
-        right: -100%;
+        right: 0;
         height: 100%;
         width: 100%;
-        background: rgba(255,255,255, .98);
+        background: rgba(255, 255, 255, 0.98);
         transition: 0.4s ease-in-out;
         z-index: 10;
     }
 
-    .navbar .active {
-        right: 0;
+    .navbar .nav-menu.active {
+        display: flex;
     }
 
     .navbar .nav-menu li a {
